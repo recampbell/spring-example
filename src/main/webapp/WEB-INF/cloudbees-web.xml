@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<cloudbees-web-app xmlns="http://www.cloudbees.com/xml/webapp/1">
+  <!-- Application ID (formatted CB_ACCOUNT/APPNAME) -->
+  <appid>APP_ID</appid>
+
+  <!-- Extra context parameters -->
+  <context-param>
+    <param-name>PARAM_NAME</param-name>
+    <param-value>PARAM_VALUE</param-value>
+  </context-param>
+
+  <resource name="jdbc/spring-example-staging" auth="Container" type="javax.sql.DataSource">
+    <param name="username" value="webinar" />
+    <param name="password" value="springintowebinar" />
+    <param name="url" value="jdbc:cloudbees://spring-example-staging" />
+  </resource>
+</cloudbees-web-app>
