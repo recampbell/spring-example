@@ -33,6 +33,10 @@
         <defaultGoal>install</defaultGoal>
         <plugins>
             <plugin>
+           <groupId>com.cloudbees</groupId>
+           <artifactId>bees-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>org.appfuse.plugins</groupId>
                 <artifactId>appfuse-maven-plugin</artifactId>
                 <version>${appfuse.version}</version>
@@ -271,6 +275,13 @@
     </repositories>
 
     <pluginRepositories>
+        <pluginRepository>
+            <id>bees-plugins-snapshots</id>
+            <url>http://repository-cloudbees.forge.cloudbees.com/public-snapshot/  </url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
         <pluginRepository>
             <id>appfuse-snapshots</id>
             <url>http://oss.sonatype.org/content/repositories/appfuse-snapshots</url>
